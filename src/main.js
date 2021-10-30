@@ -1,21 +1,21 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-import { createRouter, createWebHashHistory } from "vue-router";
-import Coffee from "./components/Coffee.vue";
-import Coffees from "./components/Coffees.vue";
+import { createApp } from 'vue'
+import App from './App.vue'
+import { createRouter, createWebHashHistory } from 'vue-router'
+import Coffee from './components/Coffee.vue'
+import Coffees from './components/Coffees.vue'
 
 const routes = [
-  { path: "/coffees", component: Coffees },
-  { path: "/coffee/:title", component: Coffee },
-];
+  { path: '/coffees', component: Coffees },
+  { path: '/coffee/:title', component: Coffee }
+]
 
 const router = createRouter({
   routes,
-  history: createWebHashHistory(),
-});
+  history: createWebHashHistory()
+})
 
-const app = createApp(App);
+const app = createApp(App)
 
-app.use(router);
+app.use(router)
 
-app.mount("#app");
+app.mount('#app')
